@@ -1,0 +1,13 @@
+<div *ngIf="invoice?.active; else errorMessage">
+    <h2>Invoice Details</h2>
+    <p>ID: {{ invoice?.idFacture }}</p>
+    <p>Amount: {{ invoice?.montantFacture }}</p>
+    <p>Date: {{ invoice?.dateFacture }}</p>
+
+    <button (click)="goBack()">Retour</button>
+  </div>
+  
+  <ng-template #errorMessage>
+    <p>Impossible de visualiser les détails de la facture</p>
+  </ng-template>
+  
